@@ -27,7 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 
-Probblemas
+Problemas
 -------------
 Barra de navegacion:
 cuando ponemos raton en more sale los temarios pero al bajar raton, se desaparece la columna entero.
