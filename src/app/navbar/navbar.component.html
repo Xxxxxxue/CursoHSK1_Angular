@@ -1,0 +1,42 @@
+<!--navagador-->
+<div class="container py-2" id="logo">
+    <div class="row">
+        <div class="col-9">
+            <a href=" " id="titulo"><h1 id="cabeza">Curso HSK1</h1></a>
+        </div>
+    </div>
+</div>
+
+<div class="container nave">
+    <div class="row">
+        <div class="col-9">
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link active navs" aria-current="page" href=" ">Home</a></li>
+                <li class="nav-item" (mouseover)="minimenu()" (mouseout)="minimenuout()"><a class="nav-link navs" href="temarios">Courses</a>
+                    <section id="barranav" [ngStyle]="sty">
+                        <ul class="navbar-nav">
+                            <li class="nav-item" *ngFor="let item of course; let i of course.slice(0,5);let id = index"><a class="nav-link active navs"  [routerLink]="['temarios/unit',id+1]">Unit {{id+1}}</a></li>
+                           
+                            <div *ngIf="pinchado; else more">
+                                <li class="nav-item" *ngFor="let item of course; let i of course.slice(5);let id = index"><a class="nav-link navs" [routerLink]="['temarios/unit',id+6]" >Unit {{id+6}}</a></li>  
+                                <li class="nav-item"><a class="nav-link navs" (click)="pinchaHidden()"href="#">Hidden</a></li>
+                            </div>
+                            <ng-template #more>
+                                <li class="nav-item" (click)="pinchaMore()" ><a class="nav-link navs mlink" href="#">More</a></li>
+                            </ng-template>
+
+                        </ul>
+                    </section>
+                </li>
+                <li class="nav-item"><a class="nav-link navs" href="ejercicios">Exercises</a></li>
+                <li class="nav-item"><a class="nav-link navs" href="apuntes">Notes</a></li>
+            </ul>  
+        </div>
+        <div class="col-3">
+            <form>
+                <input type="text"  id="busqueda" placeholder="tema1" >
+                <input type="button" id="boton"  value="Search" >
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,59 @@
+
+#logo {
+    background-image: linear-gradient(#e66465, #9198e5);
+}
+#titulo {
+    text-decoration: none;
+    color: black;
+}
+#cabeza {
+    font-weight: bold;
+}
+.nave {
+    background-color: #9198e5;
+}
+.navs {
+    text-decoration: none;
+    color: antiquewhite;
+    font-size: 16px;
+}
+.navs:focus {
+    background-color: plum;
+    color: white;
+}
+.navs:hover {
+    color: aqua;
+}
+#barranav {
+    position: fixed;
+    width: 10%;
+    margin: auto;
+    background-color:  plum;
+    padding-left: 2%;
+    display: none;
+}
+.mlink {
+    pointer-events: none;
+    cursor: default;
+}
+
+#busqueda {
+    height: 38px;
+    font-size: 16px;
+    border-style: outset;
+    border-color: rgb(152, 146, 152);
+    border-width: 2px;
+    
+}
+#boton {
+    height: 38px;
+    background-color: bisque;
+    font-size: 16px;
+    border-style: outset;
+    border-color: rgb(152, 146, 152);
+    border-width: 2px;
+    margin-left: 5px;
+}
+#boton:hover {
+    background-color: #e66465;
+}

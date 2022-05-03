@@ -1,0 +1,27 @@
+<!--Cuerpo-->
+<div class="container my-5">
+    <div class="row text-center">
+        <h4>Unit {{id}}</h4>
+        <h1>{{titulo}}</h1>
+        <button class="btn btn-info" (click)="volverTemario()" style="position: absolute;float: left; width: 80px;">Volver</button>
+    </div>
+    <!--Contenidos-->
+    <div class="container row my-5">
+        <div class="row">
+            <h5>Descripción:</h5>
+            <p>{{descripcion}}</p>
+        </div>
+        <hr>
+        <div class="row">
+            <h5>Contenido:</h5>
+            <pre>{{contenido}}</pre>
+        </div>
+        <hr>
+        <div class="row">
+            <h5>Palabras a aprender:</h5>
+            <p>{{words}}</p>
+        </div>
+        <br>
+    </div>
+   
+</div>

@@ -1,0 +1,24 @@
+<!--Cuerpo-->
+<div class="container my-5">
+    <div class="row text-center">
+        <h2>Courses</h2>
+        <h5>CHINESE HSK 1 </h5>
+    </div>
+    <!--Temas-->
+    <div class="container row my-5" *ngFor="let item of courses; let i = index">
+        <div class="col-3 text-center">
+            <br>
+            <p>Unit</p>
+            <h1 class="tema">{{i+1}}</h1>
+        </div>
+        <div class="col-9">
+            <hr>
+            <h3>{{item.titulo}}</h3>
+            <p>{{item.descripcion}}</p>
+            <br>
+            <a [routerLink]="['unit',i+1]"><button class="btn btn-primary" style="margin-right: 10px;">Start</button></a>
+            <a href="ejercicios"><button class="btn btn-info">Go to practice!</button></a>
+        </div>
+    </div>
+   
+</div>

@@ -1,0 +1,90 @@
+<!--cuerpo-->
+<div class="container my-5">
+    <div class="row">
+        <div class="col-7">
+            <h3>Acerca de este Curso</h3>
+            <br>
+            <p>
+                Nowadays, there is an increasing number of people who are interested in Chinese culture and language. And it is useful 
+                to know about the language when coming to China for travel or business. This is an ABC Chinese course for beginners, 
+                including introduction of phonetics and daily expressions. After taking this class, learners can have a basic understanding 
+                of Chinese Mandarin and make basic conversations of daily living such as exchanging personal information, talking about daily 
+                arrangements and food, asking about price, introducing the city and the weather, telling your hobbies etc. Selected topics and 
+                situations come from real life scenarios and can be used for everyday communications. In addition to the dialogues, the selection 
+                of reading materials and practice activities will make the content as rich and varied as possible, in order to stimulate the learners’ 
+                interests. This is an elementary course on Chinese speaking. The learners don’t need to study Chinese characters, so it is easier to follow 
+                and complete this course.
+            </p>
+        </div>
+        <div  class="col-5 text-md-end" >
+            <img id="foto1" src={{foto}} alt="foto" >
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="row mb-5">
+        <div class="col-6 text-center">
+            <a href="temarios"><img src="assets/imagen/courses.png" alt="cursos"></a>
+        </div>
+        <div class="col-6">
+            <h3 class="h3c">Qué aprenderás en este curso</h3>
+            <p>El curso HSK 1 es un curso del aprendizaje chino, en un nivel de iniciación. Consta de 15 temas. Vamos a por ellos!!!</p>
+        </div>
+    </div>
+    <hr>
+    <div class="row my-5 mb-5">
+        <div class="col-6">
+            <h3 class="h3c">Un montón de ejercicios</h3>
+            <p>Cada tema tiene sus propios ejercicios para practicar. Vamos a por ellos!!!</p>
+        </div>
+        <div class="col-6 text-center">
+            <a href="ejercicios"><img src="assets/imagen/ejercicios.png" alt="ejercicios"></a>
+        </div>
+    </div>
+    <hr>
+    <div class="row my-5 mb-5" >
+        <h3>Apunta con los profesores</h3>
+        <p>Si necesitas profesores particulares habla con ellos!!!</p>
+        <br>
+        <br><br>
+        <table class="table table-bordered border-dark" id="tabla">
+            <thead>
+              <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody *ngFor="let item of profes; let i = index">
+              <tr>
+                <th scope="row">{{i+1}}</th>
+                <td (dblclick)="paraEdit()">
+                    <span *ngIf="cambiarNom; else panelEdit"><input type="text" [value]="item.nombre" ></span>
+                    <ng-template #panelEdit>
+                        <span>{{item.nombre}}</span>
+                    </ng-template>
+                </td>
+                <td (dblclick)="paraEdit()">
+                    <span *ngIf="cambiarAp; else panelEdit1"><input type="text" [value]="item.apellidos" ></span>
+                    <ng-template #panelEdit1>
+                        <span>{{item.apellidos}}</span>
+                    </ng-template></td>
+                <td (dblclick)="paraEdit()">
+                    <span *ngIf="cambiarCo; else panelEdit2"><input type="text" [value]="item.correo" ></span>
+                    <ng-template #panelEdit2>
+                        <span>{{item.correo}}</span>
+                    </ng-template>
+                </td>
+
+                <td> <button class="ed" (click)="editar()">Edit</button></td>
+                <td><button class="ed">Delete</button></td>
+              </tr>
+            </tbody>
+        </table>     
+               
+    </div>
+</div>

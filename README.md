@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+Probblemas
+-------------
+Barra de navegacion:
+cuando ponemos raton en more sale los temarios pero al bajar raton, se desaparece la columna entero.
+Pinchamos una vez el unit y entramos a la pagina correcta con datos, pero si pinchamos otra vez no carga la pagina.
+
+La tabla de pagina home:
+qué parametro hay que pasar al función dblclick para que funciona correctamente, como se construye dicha función.
